@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Game</title>
+    <link rel="stylesheet" href="hangman-css.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Hangman</h1>
+        
+        <!-- Word Display Section -->
+        <div class="word-display" id="wordDisplay">_ _ _ _</div>
+        
+        <!-- Input Section -->
+        <div class="input-section">
+            <input 
+                type="text" 
+                id="letterInput" 
+                maxlength="1" 
+                placeholder="Enter a letter"
+                autocomplete="off"
+            >
+            <button id="guessButton">Guess</button>
+        </div>
+
+        <!-- Game Information -->
+        <div class="game-info">
+            <div class="incorrect-letters">
+                Incorrect Letters: <span id="incorrectLetters"></span>
+            </div>
+            <div class="attempts">
+                Remaining Attempts: <span id="remainingAttempts">6</span>
+            </div>
+        </div>
+
+        <!-- Game Messages -->
+        <div id="gameMessage" class="game-message"></div>
+        
+        <!-- Reset Button -->
+        <button class="reset-btn" id="resetButton">Reset Game</button>
+    </div>
+
+    <script src="hangman-js.js"></script>
+</body>
+</html>

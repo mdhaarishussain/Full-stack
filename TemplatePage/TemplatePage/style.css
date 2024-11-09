@@ -1,0 +1,336 @@
+*{
+    padding:0;
+    margin:0;
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+html body{
+    overflow-x: hidden;
+}
+.banner{
+    padding-top:100px;
+    background: linear-gradient(rgba(0,0,0,0.5), #009687 ), url("images/banner.avif");
+    background-size: cover;
+    background-position:center;
+    height:100vh;
+    width:100vw;
+}
+.logo
+{
+    width: 140px;
+    cursor: pointer;
+}
+.navbar {
+    background-color:#00544c;
+    position: fixed; /* Make the navbar fixed */
+    top: 0; /* Stick the navbar to the top */
+    left: 0; /* Align it with the left edge */
+    width: 100%;
+    padding: 0 20px; 
+    z-index: 1000; /* Make sure the navbar stays on top of other content */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar ul {
+    list-style: none; /* Remove default list style */
+    display: flex;
+}
+.navbar ul li{
+    margin: 0 20px;
+    position:relative;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color:white;
+}
+.navbar ul li::after{
+    content:'';
+    height: 3px;
+    width:0%;/* 100%*/
+    background-color: #009688;
+    position:absolute;
+    left:0;
+    bottom:-10px; /*0*/
+    transition: 0.5s;
+}
+.navbar ul li:hover::after{
+    width:100%
+}
+
+.banner-text{
+    text-align: center;
+    color:white;
+    padding-top: 20vh;
+}
+.banner-text h1{
+    font-size: 80px;
+    font-family: "Dancing Script", cursive;
+}
+.banner-text p{
+    font-size: 20px;
+    font-style: italic;
+    font-family: "Dancing Script", cursive;
+}
+.banner-btn{
+    /* background-color: white; */
+    margin: 70px;
+    text-align: center;
+}
+.banner-btn a{
+    /* background-color: green; */
+    text-align: center;
+    width: 150px;
+    text-decoration: none;
+    display:inline-block;
+    margin:10px;
+    padding: 12px;
+    color: white;
+    border: 0.5px solid white;
+    transition: background-color 1s;
+}
+.banner-btn a:hover{
+    background-color: white;
+    color:black;
+}
+.services{
+    padding-top:100px;
+    background: linear-gradient(rgba(0,0,0,1), #009688 );
+    margin: 0 auto;
+    color:white;
+    font-size: 18px;
+    width:100vw;
+    height:100vh;
+}
+.services .service-title{
+    font-family: "Dancing Script", cursive;
+    font-size: 40px;
+    text-align: center;
+    margin-top: -30px; /* Adjust title position */
+}
+.services .service-title span{
+    font-family: "Dancing Script", cursive;
+    font-weight: bold;
+    color: blue;
+}
+.services .service-top p{
+    margin-top: 5px;
+    padding:20px;
+}
+.services .service-bottom{
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between; /* Adjust spacing between items */
+    flex-wrap: wrap; /* Allow items to wrap if they don't fit */
+    gap: 20px; /* Add space between items */
+    padding: 0 20px; /* Add padding to the container */
+    margin: 0 auto; /* Center the service section */
+    width: 90vw; /* Ensure content doesn't exceed viewport */
+}
+.services .service-bottom .service-item{
+    margin-top:100px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px double white;
+}
+.service-item .icon-and-title {
+    display: flex;
+    align-items: center; 
+}
+.service-item .icon {
+    margin-right: 15px; /* Add some spacing between the icon and the h2 */
+}
+.service-item h2 {
+    font-size: 24px;
+}
+.testimonials {
+    padding-top: 100px;
+    background: linear-gradient(rgba(0, 0, 0, 1), #009688);
+    color: white;
+    font-size: 18px;
+    width: 100vw;
+    height: 100vh;
+}
+.testimonials .testimonials-title{
+    font-family: "Dancing Script", cursive;
+    font-size: 40px;
+    text-align: center;
+    margin-top: -30px; /* Adjust title position */
+}
+.testimonials .testimonials-title span{
+    font-family: "Dancing Script", cursive;
+    font-weight: bold;
+    color: blue;
+}
+.testimonials .testimonials-top p{
+    margin-top: 5px;
+    padding:20px;
+}
+.testimonials .testimonials-bottom{
+    display:flex;
+    align-items: stretch;
+    justify-content: space-between;
+    width:85vw;
+    margin:0 auto;
+}
+.testimonials .testimonials-bottom .testimonial-card {
+    background: rgba(255, 255, 255, 0.1); /* Glassmorphism background */
+    margin-top:100px;
+    border-radius: 20px;
+    padding:20px;
+    width: 25vw;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(255,255, 255, 0.5); /* Soft shadow for depth */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Border matching glass effect */
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+}
+.testimonial-card:hover {
+    transform: translateY(-15px) scale(1.05); /* Lift and scale on hover */
+}
+.testimonial-card img {
+    width:100px;
+    height:100px;
+    border-radius:50px;
+    margin-bottom: 30px;
+    border: 4px solid rgba(255, 255, 255, 0.5); /* Frosted border around image */
+}
+.testimonial-card h3 {
+    color: white; /* White name with elegance */
+    background: rgb(0, 150, 136); /* Teal accent behind the name */
+    padding:10px;
+    border-radius:10px;
+}
+.testimonial-card p {
+    padding:20px;
+    font-size: 16px;
+    font-style: italic;
+    color: white; /* White name with elegance */
+}
+.contact{
+    padding-top: 100px;
+    color: white;
+    font-size: 18px;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(rgba(255,255,255,0.1), #009687 ), url("images/contactuspage.jpg");
+}
+.contact-top{
+}
+.contact .contact-top h2{
+font-family: "Dancing Script", cursive;
+font-size: 40px;
+text-align: center;
+margin-top: -30px;
+}
+.contact .contact-top h2 span{
+    font-family: "Dancing Script", cursive;
+    font-weight: bold;
+    color: blue;
+}
+.contact .contact-top p{
+    margin-top: 5px;
+    padding:20px;
+}
+.contact-bottom{
+    width:70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+
+}
+.contact-bottom .contactinfo{
+width: 50%;
+height: 100%;
+display: flex;
+flex-direction: column;
+}
+.contact-bottom .contactform{
+    width: 50%;
+    height: 100%;
+}
+.contact-bottom .contactinfo .box{
+    padding: 20px 0;
+    display: flex;
+}
+.contact-bottom .contactinfo .box .icon{
+    width:60px;
+    height:60px;
+    background: #fff;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+.contact-bottom .contactinfo .box .text{
+    display:flex;
+    margin-left:20px;
+    font-size:16px;
+    color:#fff;
+    flex-direction: column;
+    font-weight: 300;
+}
+.contact-bottom .contactinfo .box .text h3{
+    font-weight: 500;
+    color: white;
+    margin-bottom: 10px;
+}
+.contactform{
+    width:50%;
+    padding:40px;
+    background:#fff ;
+}
+.contactform h2{
+    font-size: 30px;
+    color:#333;
+    font-weight: 500;
+}
+.contactform .inputbox{
+    position: relative;
+    width:100%;
+    margin-top:10px;
+}
+.contactform .inputbox input,
+.contactform .inputbox textarea{
+    width:100%;
+    padding:5px 0;
+    font-size:16px;
+    margin:10px 0;
+    border:none;
+    border-bottom:2px solid #333;
+    outline: none;
+    resize:none;
+}
+.contactform .inputbox span{
+    position: absolute;
+    left:0;
+    padding:5px 0;
+    font-size:16px;
+    margin:10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color:#666;
+}
+.contactform .inputbox input:focus ~span,
+.contactform .inputbox input:valid ~span,
+.contactform .inputbox textarea:focus ~span,
+.contactform .inputbox textarea:valid ~span{
+    color:#e91e63;
+    font-size:12px;
+    transform: translateY(-20px)
+}
+.contactform .inputbox input[type="Submit"]{
+    width:100px;
+    background:#00bcd4;
+    color:#fff;
+    border:none;
+    cursor:pointer;
+    padding:10px;
+    font-size:18px;
+}
+

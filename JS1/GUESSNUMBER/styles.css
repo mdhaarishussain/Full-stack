@@ -1,0 +1,35 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+}
+
+.game-container {
+    text-align: center;
+    background: white;
+    padding: 30px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#userGuess {
+    padding: 10px;
+    margin: 10px;
+    width: 100px;
+}
+
+#guessBtn {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#resultMessage {
+    font-weight: bold;
+    margin-top: 20px;
+}
